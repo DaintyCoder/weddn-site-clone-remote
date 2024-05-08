@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "NewSpirit";
+    src: url("/fonts/NewSpirit-regular.otf") format("opentype");
+    font-style: normal;
+  }
+  
+  
+  
+  .highlighted-text {
+    font-family: "NewSpirit";
+  }
+  
+  
+  /* 
+     By defining the @font-face at the top of your CSS, you ensure that the browser knows how to load the "NewSpirit" font 
+     when it's used in your styles. Then, applying the font-family: "NewSpirit"; to the .highlighted-text class will apply
+     this custom font to any HTML element with this class. 
+  */

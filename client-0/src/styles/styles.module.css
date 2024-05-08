@@ -1,0 +1,10 @@
+.light {
+  background-color: #fafafa;
+  color: #0f0f0f;
+  /* overflow: hidden; */
+}
+
+.dark {
+  background-color: #16181d;
+  color: #fff;
+}

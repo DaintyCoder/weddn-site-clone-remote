@@ -1,0 +1,116 @@
+#custom-input-wrapper,
+#custom-input-password-wrapper,
+#custom-select-wrapper,
+#custom-phone-input-wrapper {
+  height: 64px;
+}
+
+#input-field,
+#input-password-field,
+#input-select-field {
+  z-index: 2;
+  height: 64px;
+  /* caret-color: #ffffffd7; */
+}
+
+#input-phone-field {
+  height: 64px;
+}
+
+input:-webkit-autofill {
+  border: 0.5px solid #9a9b9e;
+  border-radius: 18px;
+  box-shadow: 0 0 0 50px #16181d inset;
+  -webkit-box-shadow: 0 0 0 50px #16181d inset; /* Change the color to your own background color */
+  -webkit-text-fill-color: #ffffffd7;
+}
+
+input:-webkit-autofill:hover {
+  border: 0.5px solid #9a9b9e;
+  border-radius: 18px;
+  box-shadow: 0 0 0 50px #16181d inset;
+  -webkit-box-shadow: 0 0 0 50px #16181d inset; /* Change the color to your own background color */
+  -webkit-text-fill-color: #ffffffd7;
+}
+
+input:-webkit-autofill:focus {
+  border: 0.5px solid #9a9b9e;
+  border-radius: 18px;
+  box-shadow: 0 0 0 50px #16181d inset;
+  -webkit-box-shadow: 0 0 0 50px #16181d inset; /*your box-shadow*/
+  -webkit-text-fill-color: #ffffffd7;
+}
+
+#input-label,
+#input-password-label {
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  opacity: 50%;
+  position: absolute;
+  transform: translate(15px, 20px) scale(1);
+  transform-origin: top left;
+  transition: all 0.2s ease-out;
+  z-index: 1;
+}
+
+#input-color-label {
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  opacity: 50%;
+  position: absolute;
+  left: 52px;
+  transform: translate(20px, 20px) scale(1);
+  transform-origin: top left;
+  transition: all 0.2s ease-out;
+  z-index: 1;
+}
+
+#custom-input-wrapper:focus-within #input-label,
+#custom-input-wrapper:focus-within #input-color-label,
+#custom-input-password-wrapper:focus-within #input-password-label {
+  transform: translate(15px, 2px) scale(0.8);
+  z-index: 2;
+}
+
+#custom-input-wrapper .Active,
+#custom-input-password-wrapper .Active {
+  transform: translate(15px, 2px) scale(0.8);
+}
+
+#input-phone-label {
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  opacity: 50%;
+  position: absolute;
+  transform: translate(65px, 15px) scale(1);
+  transform-origin: top left;
+  transition: all 0.2s ease-out;
+}
+
+#custom-phone-input-wrapper:focus-within #input-phone-label {
+  transform: translate(65px, 2px) scale(0.8);
+  z-index: 2;
+}
+
+#custom-phone-input-wrapper .Active {
+  transform: translate(65px, 2px) scale(0.8);
+}
+
+.number-format-input:hover {
+  border: 0;
+}
+
+.number-format-input:focus {
+  border: 0.5px solid #9a9b9e !important;
+}
+
+.number-format-input:disabled {
+  opacity: 0.9;
+}
+
+input.input-reg-field[type="email"] {
+  text-transform: lowercase;
+}

@@ -1,0 +1,27 @@
+.unboxd-calendar {
+  background-color: #1f2229;
+  border-radius: 18px;
+}
+
+.unboxd-calendar .react-calendar__month-view__days__day--weekend {
+  color: #fff;
+}
+
+.unboxd-calendar .react-calendar__tile--now {
+  background: #0f441e;
+}
+
+.unboxd-calendar .react-calendar__tile:disabled {
+  opacity: 0.4;
+  background: #0f441e;
+}
+
+.unboxd-calendar .react-calendar__navigation button:disabled,
+.unboxd-calendar .react-calendar__navigation button:disabled {
+  background: transparent;
+}
+
+.unboxd-calendar .react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background: #0f441e;
+}

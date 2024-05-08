@@ -1,0 +1,125 @@
+/* Importing CSS modules for different components */
+@import url("./CustomInput.module.css");
+@import url("./wedding.module.css");
+@import url("./ModalCmp.module.css");
+@import url("./CustomCalendar.module.css");
+
+/* Global styles for html and body */
+html, body {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+    padding: 0; /* Removes padding */
+    margin: 0; /* Removes margin */
+    font-family: "Plus Jakarta Sans" !important; /* Sets default font family with higher specificity */
+}
+
+/* Additional styles for body */
+body {
+    background: #16181d; /* Dark background color */
+    color: #ffffff; /* White text color */
+    font-family: "Plus Jakarta Sans"; /* Ensures font consistency */
+}
+
+/* Universal box model settings */
+* {
+    margin: 0; /* Removes margin */
+    padding: 0; /* Removes padding */
+    outline: none; /* Removes outline */
+    border: 0; /* Removes borders */
+    box-sizing: border-box; /* Changes the box model to include padding and border in the element's total width and height */
+}
+
+/* Font weight for all heading elements */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600; /* Semi-bold font weight */
+}
+
+/* Styling for all anchor tags */
+a {
+    text-decoration: none; /* Removes underline from links */
+    color: #ffffff; /* White text color for links */
+}
+
+/* Styling for paragraphs */
+p {
+    font-weight: 300; /* Light font weight */
+}
+
+/* Utility class for text alignment */
+.text-center {
+    text-align: center; /* Centers text horizontally */
+}
+
+/* Styles for testimonial slides */
+.testimonial-slide {
+    width: 100%; /* Full width */
+    max-width: 303.43px; /* Maximum width */
+}
+
+/* Specific style for the last testimonial slide */
+.testimonial-slide:last-child {
+    margin-right: 24px; /* Right margin */
+}
+
+/* Styles for swiper container */
+.swiper-container {
+    width: 480px; /* Width of the swiper container */
+}
+
+/* Flexbox alignment for custom chakra wrap */
+.custom-chakraWrap .chakra-wrap__list {
+    justify-content: center; /* Centers children horizontally within the flex container */
+}
+
+/* Styling for typewriter effect */
+.typewriter span {
+    color: #cefabb; /* Light green text color */
+}
+
+/* Keyframe animation for unanimated elements */
+.unanimate {
+    animation-duration: 5s; /* Duration of the animation */
+    animation-iteration-count: infinite; /* Animation repeats indefinitely */
+}
+
+/* Animation for moving upwards */
+.animate-up {
+    transform-origin: top; /* Sets the origin of transformation */
+    animation-name: bounce-down; /* Name of the keyframe animation */
+    animation-timing-function: linear; /* Linear timing function for smooth animation */
+}
+
+/* Animation for moving downwards */
+.animate-down {
+    transform-origin: bottom; /* Sets the origin of transformation */
+    animation-name: bounce-up; /* Name of the keyframe animation */
+    animation-timing-function: linear; /* Linear timing function for smooth animation */
+}
+
+/* Keyframes for bouncing downwards */
+@keyframes bounce-down {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(50px); }
+}
+
+/* Keyframes for bouncing upwards */
+@keyframes bounce-up {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-50px); }
+}
+
+/* Responsive styles for larger screens */
+@media screen and (min-width: 640px) {
+    .swiper-container {
+        width: 640px; /* Increases width of swiper container */
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .testimonial-slide {
+        width: 100%; /* Full width */
+        max-width: 354px; /* Increases maximum width */
+    }
+    .swiper-container {
+        width: 768px; /* Increases width of swiper container */
+    }
+}
