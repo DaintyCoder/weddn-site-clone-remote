@@ -5,6 +5,7 @@ import PublicLayout from "../Layout/PublicLayout";
 import { CanonicalProps } from "../typings/interfaces";
 import WeddingBanner from "../Layout/components/weddings/banner";
 //import WeddingPrepFeatures from "Layout/components/weddings/prepFeatures";
+import WeddingPrepFeatures from "../Layout/components/weddings/prepFeatures";
 //import GuestExperience from "Layout/components/weddings/prepFeatures/guestExperience";
 //import TestimonialCmp from "Layout/components/weddings/testimonialCmp";
 //import { getServerSideProps } from "../utils/server-side-props";
@@ -169,7 +170,8 @@ const IndexPage = ({ canonical }: CanonicalProps) => { // This component accepts
       <PublicLayout isWedding>
         <div>
           <WeddingBanner text={textChange} />
-          {/* <WeddingPrepFeatures />
+          <WeddingPrepFeatures />
+          {/* 
           <GuestExperience />
           <TestimonialCmp /> */}
         </div>
