@@ -4,24 +4,30 @@
   "private": true,
   "dependencies": {
     "@chakra-ui/react": "^2.8.2",
+    "@chatscope/chat-ui-kit-react": "^2.0.3",
     "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.5",
+    "@emotion/styled": "^11.0.0",
     "@reduxjs/toolkit": "^2.2.3",
+    "@svgr/webpack": "^8.1.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.96",
-    "@types/react": "^18.3.1",
-    "@types/react-dom": "^18.3.0",
+    "@types/react-dom": "^17.0.2",
+    "axios": "^1.6.8",
     "framer-motion": "^11.1.7",
     "next": "^14.2.3",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^18.2.0",
+    "react-chat-elements": "^12.0.14",
+    "react-chatbot-kit": "^2.2.2",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.2.1",
     "react-loader-spinner": "^6.1.6",
     "react-redux": "^9.1.2",
     "react-scripts": "5.0.1",
     "react-spinners": "^0.13.8",
+    "react-util-kit": "^0.0.15",
     "spinners-react": "^1.0.7",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
@@ -52,6 +58,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react": "^18.2.25",
     "@types/react-redux": "^7.1.33",
     "prettier": "^3.2.5"
   }

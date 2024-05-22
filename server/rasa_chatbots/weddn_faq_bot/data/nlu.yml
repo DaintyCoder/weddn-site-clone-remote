@@ -1,0 +1,135 @@
+version: "3.1"
+nlu:
+  - intent: goodbye
+    examples: |
+      - Bye
+      - Goodbye
+  - intent: greet
+    examples: |
+      - Hello there
+      - Hello
+      - Hi
+      - Hey
+      - Are you there?
+  - intent: faq_account/account_signup
+    examples: |
+      - What do I need to sign up?
+      - The requirements for signing up
+      - Tell me what I need for signing up
+      - Do I need an email address to sign up?
+      - Do I need a phone number to sign up?
+      - Do I need my national ID to sign up?
+      - Do I need my International Passport to sign up?
+  - intent: faq_account/account_skip
+    examples: |
+      - Can I skip setting up an account?
+      - Do I need an account to use your services?
+      - Do I need to register for an account to use your services?
+      - Do I need to register for an account to use your platform?
+      - I want to skip setting up an account?
+      - Is skipping the use of an account possible?
+      - I want to use your services without an account
+  - intent: faq_account/account_info_safety
+    examples: |
+      - Is my information safe?
+      - I want to know if my information is safe?
+      - Can you guarantee that my information will be secured?
+      - Is my data available to third-parties?
+      - Is my information inaccessible to external parties?
+      - Do I need to be worried about the security of my information
+  - intent: faq_account/account_spam_mail
+    examples: |
+      - Will you bombard me with emails?
+      - I don't want to be spammed with emails
+      - Will you disturb me with irrelevant emails?
+      - I want the emails sent to me to be kept to the bare minimum
+      - I don't want unncessary emails
+      - I want few emails sent to me
+  - intent: faq_wishlist/event_type
+    examples: |
+      - What types of event can I use unboxd for?
+      - unboxd is used for what types of event?
+      - unboxd is applicable to which types of events?
+      - I want to know the types of events applicable to unboxd
+      - Tell me the types of event that unboxd canbe used for
+  - intent: faq_wishlist/vendor_items
+    examples: |
+      - Can I list items from a vendor?
+      - Is it possible for me to list items from a vendor?
+      - I want to list items from a vendor
+      - Can I display items from a vendor?
+  - intent: faq_wishlist/item_image
+    examples: |
+      - Can I list an item without a picture?
+      - Can I show an item that has no picture?
+      - Can I show an item that has no image?
+      - what about items that have no image?
+      - what about an item without a picture?
+      - Can I list any item that has no image?
+  - intent: faq_wishlist/item_delete
+    examples: |
+      - Can I delete an item later?
+      - I want to delete an item
+      - Is it possible to delete an item?
+      - I intend to delete an item in the future
+      - I want to know if it's possible to delete an item
+      - I need an item removed from my list
+  - intent: faq_sharing/list_post
+    examples: |
+      - Where can I share my list to?
+      - Can I share my list on whatsapp?
+      - Can I post my list on Facebook?
+      - I want to share my list on social media
+      - I want to post my list on social media
+      - I want to share my list online
+      - Is it possible to share my list on social media?
+  - intent: faq_sharing/list_privacy
+    examples: |
+      - Is my wishlist hidden or open to anyone?
+      - Is my wishlist confidential?
+      - I want to know if my wishlist is hidden
+      - I hope my list isn't available to anyone
+      - I need to know if my wishlist is hidden
+  - intent: faq_sharing/list_access
+    examples: |
+      - Can I restrict access to my wishlist?
+      - Can I limit access to the wishlist
+      - Can I place limitations on who can access my wishlist?
+      - I want restriction on who can access my wishlist
+  - intent: faq_contributions/contribution_location
+    examples: |
+      - Where are my contributions kept?
+      - I want to know where my contributions are kept
+      - Can you tell me where my contributions are stored?
+      - Do I have an E-wallet that stores my contributions?
+      - Where do you keep my contributions
+      - Do you keep my contributions in an E-wallet?
+  - intent: faq_contributions/contribution_limits
+    examples: |
+      - Are there limits on withdrawals and contributions?
+      - Do withdrawals and contributions have limits
+      - Are there limits on withdrawals?
+      - Are there limits on contributions?
+      - Are there limits placed on contributions?
+      - Is there a 500k limit per transaction for contributions?
+  - intent: faq_contributions/wallet_security
+    examples: |
+      - How secure is the unboxd wallet?
+      - is the unboxd wallet secure?
+      - Can you guarantee the security of unboxd wallet?
+      - is your e-wallet secure?
+      - Hope the e-wallet is very secure?
+  - intent: faq_contributions/contribution_withdrawal
+    examples: |
+      - How do I withdraw the contributions?
+      - I want to know how I can withdraw my contributions?
+      - Where do i withdraw my contributions from?
+      - I want to withdraw my contributions
+  - intent: faq_contributions/unboxd_cost
+    examples: |
+      - What does it cost to use unboxd?
+      - How much does it cost to use unboxd?
+      - How much money is required to use unboxd?
+      - Is unboxd expensive?
+      - Is the cost of using unboxed high?
+      - How much to use unboxd?

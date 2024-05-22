@@ -1,4 +1,4 @@
-// Import necessary components and libraries
+/// Import necessary components and libraries
 import { Flex, Spacer, Text as PageHeading } from "@chakra-ui/react";
 import { GetServerSideProps } from "next";
 import Head from "next/head";
@@ -7,6 +7,53 @@ import Styled from "styled-components";
 import Accordion from "../../components/Accordion";
 import { BottomWrapper, ContentWrapper, Header, Link, SubHeading, Tabsheader } from "../../components/commons/styles";
 import PublicLayout from "../../Layout/PublicLayout";
+import ChatbotComponent from "../../components/chatbots";
+//import ChatbotComponent from "../../components/chatbots/index";
+
+//import ConditionallyRender from "react-util-kit";
+
+//import { ReactComponent as Logo } from "../../assets/icons/logo.svg";
+//import { ReactComponent as ButtonIcon } from "../../assets/icons/robot.svg";
+
+import { IoChatbubblesSharp } from 'react-icons/io5'; // Import the chat icon
+
+// Debugging logs
+//console.log("Accordion:", Accordion);
+//console.log("PublicLayout:", PublicLayout);
+//console.log("ChatbotComponent:", ChatbotComponent);
+//console.log("ButtonIcon:", ButtonIcon);
+
+
+/* 
+In the provided code snippet, two SVG files are being imported as React components using ES6 destructuring syntax.
+
+The first import statement:
+import { ReactComponent as Logo } from "../../assets/icons/logo.svg";
+This line imports the SVG file located at "../../assets/icons/logo.svg" and assigns it to the variable Logo as a React component. This allows you to use the SVG file as a React component in your code.
+
+The second import statement:
+import { ReactComponent as ButtonIcon } from "../../assets/icons/robot.svg";
+Similarly, this line imports the SVG file located at "../../assets/icons/robot.svg" and assigns it to the variable ButtonIcon as a React component.
+
+By importing SVG files as React components, you can easily use them within your React components like regular JSX elements. For example, you can render the Logo and ButtonIcon components in your React component's render method:
+
+import React from 'react';
+import { type } from 'os';
+
+const MyComponent = () => {
+  return (
+    <div>
+      <Logo />
+      <ButtonIcon />
+    </div>
+  );
+};
+
+export default MyComponent;
+This way, you can leverage the power of React to manipulate and display SVG files within your React application.
+*/
+
+
 
 // Define the props type for the FAQ component
 interface FaqProps {
@@ -15,8 +62,13 @@ interface FaqProps {
 
 // FAQ component definition
 const Faq = ({ carnonical }: FaqProps) => {
+
+  
+  const [showChatbot, toggleChatbot] = useState(false);
+
   // State to manage the active tab
   const [toggleState, setToggleState] = useState(1);
+
 
   // Data for the FAQ sections
   const faqAccount = [
@@ -121,75 +173,129 @@ const Faq = ({ carnonical }: FaqProps) => {
         <link rel="canonical" href={`https://${carnonical}/faq`} />
       </Head>
       <PublicLayout>
-        <Container>
-          <Spacer w={"full"} h={{ base: "170px" }} />
-          <Flex alignItems="center" justifyContent="center">
-            <PageHeading fontSize={{ base: "30px", md: "64px" }} lineHeight={{ base: "40.4px", md: "80.64px" }} fontWeight={600} align={"center"} maxW={{ base: "342px", md: "518px" }} mb={"23px"}>
-              Frequently Asked Questions
-            </PageHeading>
-          </Flex>
-          <Tabsheader>
-            {/* Tab headers */}
-            <button className={toggleState === 1 ? "tabs active-tabs" : "tabs"} onClick={() => toggleTab(1)}>
-              <Header>Account</Header>
-            </button>
-            <button className={toggleState === 2 ? "tabs active-tabs" : "tabs"} onClick={() => toggleTab(2)}>
-              <Header>Wishlist</Header>
-            </button>
-            <button className={toggleState === 3 ? "tabs active-tabs" : "tabs"} onClick={() => toggleTab(3)}>
-              <Header>Sharing</Header>
-            </button>
-            <button className={toggleState === 4 ? "tabs active-tabs" : "tabs"} onClick={() => toggleTab(4)}>
-              <Header>Wallet</Header>
-            </button>
-          </Tabsheader>
-          <ContentWrapper>
-            {/* Content for each tab */}
-            <div className={toggleState === 1 ? "active-content" : "content"}>
-              {faqAccount.map(({ title, body }, index) => (
-                <Accordion key={index} title={title} body={body} />
-              ))}
-              <Spacer w={"full"} h={{ base: "20px" }} />
-              <BottomWrapper>
-                <h4>Next, list the things you need.</h4>
-                <p>Whatever you want your friends and family to help you get, list them all, attach respective features, fill their price and you are almost done.</p>
-              </BottomWrapper>
-            </div>
-            <div className={toggleState === 2 ? "active-content" : "content"}>
-              {faqWishlist.map(({ title, body }, index) => (
-                <Accordion key={index} title={title} body={body} />
-              ))}
-              <Spacer w={"full"} h={{ base: "20px" }} />
-              <BottomWrapper>
-                <h4>Then, generate a custom link and share your wishlist</h4>
-                <p> Each unboxd event gets a custom link that your loved ones can use to view the items you have listed and then make part or full contribution for you to purchase the item. For even more convenience, unboxd lets you share directly to Whatsapp, Facebook and Twitter. </p>
-              </BottomWrapper>
-            </div>
-            <div className={toggleState === 3 ? "active-content" : "content"}>
-              {faqSharing.map(({ title, body }, index) => (
-                <Accordion key={index} title={title} body={body} />
-              ))}
-              <Spacer w={"full"} h={{ base: "20px" }} />
-              <BottomWrapper>
-                <h4>Finally, start practicing the money dance 🕺🏽</h4>
-                <p> After you share your list with your loved ones anywhere in the world, you can begin to receive part or full payment for any of the items on your wishlist. The contributions received will be saved securely in your wallet and be available for immediate transfer once you request to payout. </p>
-                <p>Hint: Always follow up with your loved ones so your needs remain top of mind.</p>
-              </BottomWrapper>
-            </div>
-            <div className={toggleState === 4 ? "active-content" : "content"}>
-              {faqContributions.map(({ title, body }, index) => (
-                <Accordion key={index} title={title} body={body} />
-              ))}
-              <Spacer w={"full"} h={{ base: "20px" }} />
-              <BottomWrapper>
-                <SubHeading>Still got questions?</SubHeading>
-                <Link href="https://twitter.com/unboxdgifts" target="_blank" rel="noopener noreferrer" > Ask on twitter </Link>
-              </BottomWrapper>
-            </div>
-          </ContentWrapper>
-          <Spacer w={"full"} h={{ base: "100px" }}></Spacer>
-        </Container>
+      <Container>
+        <Spacer w={"full"} h={{ base: "170px" }} />
+        <Flex alignItems="center" justifyContent="center">
+          <PageHeading fontSize={{ base: "30px", md: "64px" }} lineHeight={{ base: "40.4px", md: "80.64px" }} fontWeight={600} align={"center"} maxW={{ base: "342px", md: "518px" }} mb={"23px"}>
+            Frequently Asked Questions
+          </PageHeading>
+        </Flex>
+        <Tabsheader>
+          {/* Tab headers */}
+          <button className={toggleState === 1 ? "tabs active-tabs" : "tabs"} onClick={() => toggleTab(1)}>
+            <Header>Account</Header>
+          </button>
+          <button className={toggleState === 2 ? "tabs active-tabs" : "tabs"} onClick={() => toggleTab(2)}>
+            <Header>Wishlist</Header>
+          </button>
+          <button className={toggleState === 3 ? "tabs active-tabs" : "tabs"} onClick={() => toggleTab(3)}>
+            <Header>Sharing</Header>
+          </button>
+          <button className={toggleState === 4 ? "tabs active-tabs" : "tabs"} onClick={() => toggleTab(4)}>
+            <Header>Wallet</Header>
+          </button>
+        </Tabsheader>
+        <ContentWrapper>
+          {/* Content for each tab */}
+          <div className={toggleState === 1 ? "active-content" : "content"}>
+            {faqAccount.map(({ title, body }, index) => (
+              <Accordion key={index} title={title} body={body} />
+            ))}
+            <Spacer w={"full"} h={{ base: "20px" }} />
+            <BottomWrapper>
+              <h4>Next, list the things you need.</h4>
+              <p>Whatever you want your friends and family to help you get, list them all, attach respective features, fill their price and you are almost done.</p>
+            </BottomWrapper>
+          </div>
+          <div className={toggleState === 2 ? "active-content" : "content"}>
+            {faqWishlist.map(({ title, body }, index) => (
+              <Accordion key={index} title={title} body={body} />
+            ))}
+            <Spacer w={"full"} h={{ base: "20px" }} />
+            <BottomWrapper>
+              <h4>Then, generate a custom link and share your wishlist</h4>
+              <p> Each unboxd event gets a custom link that your loved ones can use to view the items you have listed and then make part or full contribution for you to purchase the item. For even more convenience, unboxd lets you share directly to WhatsApp, Facebook and Twitter. </p>
+            </BottomWrapper>
+          </div>
+          <div className={toggleState === 3 ? "active-content" : "content"}>
+            {faqSharing.map(({ title, body }, index) => (
+              <Accordion key={index} title={title} body={body} />
+            ))}
+            <Spacer w={"full"} h={{ base: "20px" }} />
+            <BottomWrapper>
+              <h4>Finally, start practicing the money dance 🕺🏽</h4>
+              <p> After you share your list with your loved ones anywhere in the world, you can begin to receive part or full payment for any of the items on your wishlist. The contributions received will be saved securely in your wallet and be available for immediate transfer once you request to payout. </p>
+              <p>Hint: Always follow up with your loved ones so your needs remain top of mind.</p>
+            </BottomWrapper>
+          </div>
+          <div className={toggleState === 4 ? "active-content" : "content"}>
+            {faqContributions.map(({ title, body }, index) => (
+              <Accordion key={index} title={title} body={body} />
+            ))}
+            <Spacer w={"full"} h={{ base: "20px" }} />
+            <BottomWrapper>
+              <SubHeading>Still got questions?</SubHeading>
+              <Link href="https://twitter.com/unboxdgifts" target="_blank" rel="noopener noreferrer">Ask on Twitter</Link>
+            </BottomWrapper>
+          </div>
+        </ContentWrapper>
+        <Spacer w={"full"} h={{ base: "100px" }}></Spacer>
+      </Container>
+      
       </PublicLayout>
+      {/* Chatbot toggle button */}
+  <button 
+    type="button"
+    style={{
+      position: 'fixed',
+      bottom: '20px',
+      right: '20px',
+      fontSize: '24px',
+      background: 'rgba(53, 146, 93, 1)',
+      color: 'white',
+      borderRadius: '50%',
+      border: 'none',
+      width: '60px',
+      height: '60px',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      cursor: 'pointer',
+      boxShadow: '0 4px 8px rgba(0,0,0,0.1)'
+    }} 
+    onClick={() => toggleChatbot((prev) => !prev)} 
+    aria-label={showChatbot ? "Close chatbot" : "Open chatbot"}
+  >
+    <IoChatbubblesSharp />
+  </button>
+
+  {/* Button to hide the chatbot */}
+  {showChatbot && (
+    <button 
+      type="button"
+      style={{
+        position: 'fixed',
+        bottom: '530px',
+        right: '20px',
+        fontSize: '14px',
+        background: 'rgba(53, 146, 93, 1)',
+        color: 'white',
+        borderRadius: '8px',
+        border: 'none',
+        padding: '10px 20px',
+        cursor: 'pointer',
+        boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+        zIndex: '9999'  // Adjust the z-index to ensure it's above other elements
+      }} 
+      onClick={() => toggleChatbot(false)}  
+      aria-label="Close chatbot"
+    >
+      Hide Chatbot
+    </button>
+  )}
+
+  {/* Chatbot component */}
+  {showChatbot && <ChatbotComponent />}
     </>
   );
 };

@@ -1,0 +1,30 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"faq_sharing\"}}]": "utter_faq_sharing",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"faq_sharing\"}}, {\"prev_action\": {\"action_name\": \"utter_faq_sharing\"}, \"user\": {\"intent\": \"faq_sharing\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"faq_account\"}}]": "utter_faq_account",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"faq_account\"}}, {\"prev_action\": {\"action_name\": \"utter_faq_account\"}, \"user\": {\"intent\": \"faq_account\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"faq_wishlist\"}}]": "utter_faq_wishlist",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"faq_wishlist\"}}, {\"prev_action\": {\"action_name\": \"utter_faq_wishlist\"}, \"user\": {\"intent\": \"faq_wishlist\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"faq_contributions\"}}]": "utter_faq_contributions",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"faq_contributions\"}}, {\"prev_action\": {\"action_name\": \"utter_faq_contributions\"}, \"user\": {\"intent\": \"faq_contributions\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"faq_wishlist\"}}, {\"prev_action\": {\"action_name\": \"utter_faq_wishlist\"}, \"user\": {\"intent\": \"faq_wishlist\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"faq_account\"}}, {\"prev_action\": {\"action_name\": \"utter_faq_account\"}, \"user\": {\"intent\": \"faq_account\"}}]",
+      "predicting default action with intent restart",
+      "predicting default action with intent session_start",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"faq_sharing\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"faq_wishlist\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"faq_contributions\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"faq_contributions\"}}, {\"prev_action\": {\"action_name\": \"utter_faq_contributions\"}, \"user\": {\"intent\": \"faq_contributions\"}}]",
+      "predicting default action with intent back",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"faq_sharing\"}}, {\"prev_action\": {\"action_name\": \"utter_faq_sharing\"}, \"user\": {\"intent\": \"faq_sharing\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"faq_account\"}}]"
+    ]
+  }
+}

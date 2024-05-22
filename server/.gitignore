@@ -1,0 +1,11 @@
+# Virtual environment
+myenv/
+.myenv/
+
+# Node.js dependencies
+node_modules/
+
+
+# Python cache files
+__pycache__/
+*.pyc

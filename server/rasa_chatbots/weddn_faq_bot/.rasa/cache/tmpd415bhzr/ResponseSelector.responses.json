@@ -1,0 +1,82 @@
+{
+  "utter_faq_account/account_signup": [
+    {
+      "text": "You only need to input your name, email address, phone number and a beautiful image of you so your friends can easily identify that it is you."
+    }
+  ],
+  "utter_faq_account/account_skip": [
+    {
+      "text": "No, you can't skip creating an account. To use Unboxd, an account is required."
+    }
+  ],
+  "utter_faq_account/account_info_safety": [
+    {
+      "text": "Your information is securely stored in our database for contact purposes only. For example, when you lose your password, your email or phone number is where we will send the steps to recover your password."
+    }
+  ],
+  "utter_faq_account/account_spam_mail": [
+    {
+      "text": "No, you won't be bombarded with irrelevant emails. You'd only get notified for transactions and updates about unboxd."
+    }
+  ],
+  "utter_faq_wishlist/event_type": [
+    {
+      "text": "All events really. Unboxd is primarily an item listing tool that can be used for just about anything you can imagine. Some people have used it for their birthdays, others have used it for setting up their new home. You can use it for your wedding, anniversary, graduation etc."
+    }
+  ],
+  "utter_faq_wishlist/vendor_items": [
+    {
+      "text": "Not yet. The current version of unboxd only allows you to list items manually. You take a picture, upload, put the title, state the cost and publish."
+    }
+  ],
+  "utter_faq_wishlist/item_image": [
+    {
+      "text": "No. All item needs to have a respective picture for your loved ones to see."
+    }
+  ],
+  "utter_faq_wishlist/item_delete": [
+    {
+      "text": "Yes. If you added an item but no longer want your loved ones to see it, you can delete it."
+    }
+  ],
+  "utter_faq_sharing/list_post": [
+    {
+      "text": "Unboxd allows you to share directly to facebook, whatsapp and twitter. You can also copy your custom link and insert in your bio link on instagram, send as direct message etc."
+    }
+  ],
+  "utter_faq_sharing/list_privacy": [
+    {
+      "text": "Your wish list is hidden but is visible to anyone who has the link."
+    }
+  ],
+  "utter_faq_sharing/list_access": [
+    {
+      "text": "Anyone you have shared your wish list link with will be able to access it any time."
+    }
+  ],
+  "utter_faq_contributions/contribution_location": [
+    {
+      "text": "Upon completing sign up, an e-wallet is setup for each user. All contributions made are securely saved in the wallet, available to be withdrawn anytime."
+    }
+  ],
+  "utter_faq_contributions/contribution_limits": [
+    {
+      "text": "When you are ready to withdraw the contributions from your loved ones, you can go ahead with it without limits on minimum or maximum amount. But for contributions, there is a N500k limit per transaction. That sucks right? Yh, we know. But there is nothing we can do, it's due to CBN policies."
+    }
+  ],
+  "utter_faq_contributions/wallet_security": [
+    {
+      "text": "Very secure. We have processed millions of transactions and not a single complaint has been made about missing money."
+    }
+  ],
+  "utter_faq_contributions/contribution_withdrawal": [
+    {
+      "text": "When ready, click 'request payout' from the wallet screen and follow the prompt to have the funds transferred to your local bank account."
+    }
+  ],
+  "utter_faq_contributions/unboxd_cost": [
+    {
+      "text": "We have made sure that no one loses the amount that they want, so what we do is mark up the cost by 4%. Example:- When you create an Item for 50k, we markup and it becomes 52k, when this item is posted online for your contributors, they see 52k and contribute towards 52k. Flutterwave takes their charge from the 52k, instead of an extra charge from the client, the user gets their original 50k and unboxd gets the difference. This way, contributors will not pay any transaction charge to do good (contributing towards a goal), then list creators will not lose any money."
+    }
+  ]
+}

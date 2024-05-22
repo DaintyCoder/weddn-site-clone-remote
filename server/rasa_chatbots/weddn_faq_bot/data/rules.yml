@@ -1,0 +1,22 @@
+version: "3.1"
+
+rules:
+- rule: respond to faq on account issues
+  steps:
+  - intent: faq_account
+  - action: utter_faq_account
+
+- rule: respond to faq on wishlist issues
+  steps:
+  - intent: faq_wishlist
+  - action: utter_faq_wishlist
+
+- rule: respond to faq on sharing issues
+  steps:
+  - intent: faq_sharing
+  - action: utter_faq_sharing
+
+- rule: respond to faq on payment issues
+  steps:
+  - intent: faq_contributions
+  - action: utter_faq_contributions

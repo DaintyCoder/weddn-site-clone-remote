@@ -19,10 +19,18 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "typeRoots": [
+      "node_modules/@types",
+      "src/types"
+    ],
+    "types": ["react", "react-dom"],
   },
   "include": [
-    "src"
+    "src/**/*.ts",
+      "src/**/*.tsx",
+      "src/types/.d.ts",
+      "src/**/*.svg"
   ],
   "exclude": [
     "node_modules"
